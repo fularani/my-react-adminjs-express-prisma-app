@@ -7,13 +7,15 @@
       "esnext"
     ],
     "allowJs": true,
+    "checkJs": true,
+    "outDir": "dist",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
+    "module": "CommonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -21,6 +23,8 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
-  ]
+    "src/**/*","src","next-env.d.ts", "**/*.ts", "**/*.tsx","**/*.js"
+  ],
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "exclude": ["node_modules"],
 }
